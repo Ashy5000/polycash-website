@@ -74,13 +74,11 @@ To allow data to be sent through the blockchain, a body may be attached to each 
 
 **7 Hashrate Forking Prevention**
 
-It is crucial to prevent miners from forking their hashrate through multiple wallet addresses, circumventing the difficulty adjustment algorithm. Three major strategies are applied to this issue.
+It is crucial to prevent miners from forking their hashrate through multiple wallet addresses, circumventing the difficulty adjustment algorithm. Two major strategies are applied to this issue.
 
-1. Maximum Miner Count
-   Maximum miner count, as addressed previously, can limit the number of miners in the network and thus the number of wallet addresses miners can fork their mining power into.
-2. Block Reward Locking
+1. Block Reward Locking
    Block reward locking prevents miners gaining block rewards until they have mined at least 3 blocks, lowering the efficiency of mining rate forking.
-3. Block Reward Adjustment
+2. Block Reward Adjustment
    Block Reward Adjustment decreases the block reward for each new miner that mines a block by 1% in order to impose a net loss of profits on miners that fork their hashrate. This is the most effective approach.
 
 **7.1 Block Reward Adjustment**
