@@ -33,7 +33,7 @@
                 width: 100%;
             "
         >
-            <img src="assets/nodes.png" style="width: 400px; height: auto" />
+            <img src="assets/nodes.png" style="width: auto; height: auto" />
             <div
                 style="
                     position: absolute;
@@ -64,22 +64,30 @@
                     <a href="https://github.com/ashy5000/cryptocurrency">here</a
                     >.
                 </li>
+                <li>Install prerequisites listed in the Github's README.</li>
                 <li>
                     Build the node executable:<br />
-                    <code>go build -o builds/node/node_linux-amd64</code>
+                    <code>go build -o builds/node/node</code>
                 </li>
                 <li>
                     Move into the <code>contracts</code> directory and build the
                     VM executable:
                     <br />
-                    <code>cd contracts; cargo build</code>
+                    <code>cd contracts; cargo build; cd ..</code>
+                </li>
+                <li>
+                    Create a key file:
+                    <br />
+                    <code>touch key.json</code>
+                </li>
+                <li>
+                    Create a key:
+                    <br />
+                    <code>./builds/node/node -command "keygen"</code>
                 </li>
                 <li>
                     Bootstrap peers:
-                    <code
-                        >./builds/node/node_linux-amd64 -command
-                        "bootstrap"</code
-                    >
+                    <code>./builds/node/node -command "bootstrap"</code>
                 </li>
                 <li>
                     Start your node:
