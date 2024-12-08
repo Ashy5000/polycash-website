@@ -11,6 +11,7 @@
         />
         <title>Polycash</title>
         <script src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
+        <link rel="stylesheet" type="text/css" href="style.css">
         <script>
             $(function () {
                 $("#includeHtml").load("navbar.html");
@@ -33,15 +34,15 @@
                 width: 100%;
             "
         >
-            <img src="assets/network.png" style="width: 100%; height: auto" />
             <div
                 style="
-                    position: absolute;
+                    position: relative;
                     color: white;
                     font-size: 50px;
                     font-weight: bold;
                     text-align: center;
                 "
+                class="important"
             >
                 APoW
             </div>
@@ -53,7 +54,7 @@
                 underlying the Polycash protocol. By combining
                 <a href="#" class="link-info">difficulty adjustment</a>,
                 <a href="#" class="link-info">time verification</a>, and the
-                <a href="#" class="link-info"">Polycash Incentives System</a>, APoW increases
+                <a href="#" class="link-info">Polycash Incentives System</a>, APoW increases
                 security, decentralization, and power efficiency to the network
                 and blockchain. APoW is composed of three components. The first,
                 difficulty adjustment, is necessary for decreasing the energy
@@ -61,8 +62,25 @@
                 Time verification, on the other hand, is designed to improve the
                 network's security and reliability. Finally, the Polycash
                 Incentives System prevents miners from performing Sybil attacks
-                when attempting to maximise profits.
+                when attempting to maximise profits.<br /><br />
+                <img src="assets/graph-0.svg" width=400 height=400 alt="A graph of difficulty edge against mining speed"/><br />
+                <i>A graph of difficulty edge against mining speed.</i><br /><br />
+                As shown in the above graph, faster miners have a higher chance of winning
+                blocks. However, there are diminishing returns- past a certain point
+                defined by the overhead costs of mining, it becomes unprofitable to
+                inrease computing power. This means that large mining corporations
+                that create centralization and draw extremely large amounts of power
+                from the grid will not mine on the Polycash blockchain. Instead,
+                miners will use equipment with low power usage and hashrate. This
+                reduces environmental impact while also maintaining equity between
+                miners.<br />
+                And while the total hashrate of the network is lower, there is no
+                harsh impact on security. APoW also works against entities trying
+                to fork the chain by increasing their blocks' difficulty as their
+                hashpower increases.<br />
+                <b>More decentralization, less power, same security.</b>
             </p>
         </div>
+        <div class="bottom_mask"></div>
     </body>
 </html>
