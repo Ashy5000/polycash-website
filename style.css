@@ -1,0 +1,64 @@
+body {
+  background: black;
+  background-image: radial-gradient(white 1px, transparent 0);
+  background-size: 40px 40px;
+  background-position: -19px -19px;
+  font-family: "Monda", monospace;
+}
+
+.important, .navbar {
+  font-family: "Victor Mono", monospace;
+}
+
+.mask {
+  width: 100vw;
+  height: 100vh;
+  background-color: rgb(0, 0, 0);
+  mask: radial-gradient(
+    circle at var(--mouse-x) var(--mouse-y),
+    transparent 40px,
+    black 150px
+  );
+  -webkit-mask: radial-gradient(
+    circle at var(--mouse-x) var(--mouse-y),
+    transparent 40px,
+    black 150px
+  );
+  position: fixed;
+}
+
+.fancy-btn {
+  border: 1px solid;
+  overflow: hidden;
+  position: relative;
+  
+  span {
+    z-index: 20;
+  }
+  
+  &:after {
+    background: #fff;
+    content: "";
+    height: 155px;
+    left: -75px;
+    opacity: .2;
+    position: absolute;
+    top: -50px;
+    transform: rotate(35deg);
+    transition: all 550ms cubic-bezier(0.19, 1, 0.22, 1);
+    width: 50px;
+    z-index: -10;
+  }
+}
+
+.fancy-btn:hover {
+  
+  &:after {
+    left: 120%;
+    transition: all 550ms cubic-bezier(0.19, 1, 0.22, 1);
+  }
+}
+
+.show {
+  opacity: 0.999;
+}
