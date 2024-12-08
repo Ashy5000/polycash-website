@@ -27,6 +27,13 @@ body {
   position: fixed;
 }
 
+.bottom_mask {
+  width: 100vw;
+  height: 30vh;
+  background-color: rgb(0, 0, 0);
+  mask: linear-gradient(to bottom, transparent, black);
+}
+
 .fancy-btn {
   border: 1px solid;
   overflow: hidden;
