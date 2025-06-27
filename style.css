@@ -6,6 +6,16 @@ body {
   font-family: "Monda", monospace;
 }
 
+.glass {
+/* From https://css.glass */
+background: rgba(130, 255, 209, 0.1);
+border-radius: 16px;
+box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+backdrop-filter: blur(2px);
+-webkit-backdrop-filter: blur(2px);
+border: 1px solid rgba(130, 220, 209, 0.3);
+}
+
 .important, .navbar {
   font-family: "Victor Mono", monospace;
 }
@@ -68,4 +78,66 @@ body {
 
 .show {
   opacity: 0.999;
+}
+
+.fa {
+  padding-top: 7px;
+  padding-left: 1px;
+  font-size: 15px;
+  width: 30px;
+  height: 30px;
+  text-align: center;
+  text-decoration: none;
+  border-radius: 50%;
+}
+
+.fa-discord {
+  background: #5865f2;
+  color: white;
+}
+
+.fa-github {
+  background: #010409;
+  color: white;
+}
+
+.sans-serif {
+  font-family: sans-serif;
+}
+
+.cards {
+  display: flex;
+}
+
+.overlap-card:nth-child(1) { width: 1000px; }
+.overlap-card:nth-child(2) { width: 1000px; margin-left: -800px; margin-top: 20px; margin-bottom: -20px; }
+.overlap-card:nth-child(3) { width: 1000px; margin-left: -800px; margin-top: 40px; margin-bottom: -40px; }
+
+code {
+  background-image: linear-gradient(
+    -225deg,
+    #231557 0%,
+    #44107a 29%,
+    #ff1361 67%,
+    #fff800 100%
+  );
+  background-size: auto auto;
+  background-clip: border-box;
+  background-size: 200% auto;
+  color: #fff;
+  background-clip: text;
+  text-fill-color: transparent;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: textclip 2s linear infinite;
+}
+
+@keyframes textclip {
+  to {
+    background-position: 200% center;
+  }
+}
+
+.card-body {
+  margin: 10px;
 }
